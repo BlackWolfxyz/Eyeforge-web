@@ -1,0 +1,11 @@
+echo "[+] Starting EyeForge Web-to-APK Deployment..."
+mkdir -p output
+echo '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>EyeForge</title></head><body><h1>EyeForge v3.5 Ultimate</h1><p>System ready. Reaper AI active.</p></body></html>' > output/index.html
+echo "[✓] index.html generated."
+
+# Add favicon/icon logic later if needed
+cp output/index.html index.html
+
+git add . && git commit -m "Deploy EyeForge web for WebIntoApp" && git push origin main
+
+echo "[✓] Deployment finished. Open: https://blackwolfxyz.github.io/eyeforge-web"
